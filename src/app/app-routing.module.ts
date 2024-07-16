@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'mf1',
-    loadChildren: () => import('./mf1/mf1.module').then((m) => m.Mf1Module),
-  },
-  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',
+  },
+  {
+    path: 'mf1',
+    loadChildren: () =>
+      import('./custom-components/mf1/mf1.module').then((m) => m.Mf1Module),
   },
 ];
 
